@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>abp.core.start2019</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Domain" Version="0.10.0" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="0.10.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="0.10.0" />
+    <PackageReference Include="Volo.Abp.Auditing" Version="0.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\start2019\*.json" />
+  </ItemGroup>
+
+</Project>
