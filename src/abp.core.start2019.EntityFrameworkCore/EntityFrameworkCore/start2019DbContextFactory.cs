@@ -12,7 +12,10 @@ namespace abp.core.start2019.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<start2019DbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseSqlServer(configuration.GetConnectionString("Default"))
+                .UseMySQL(configuration.GetConnectionString("MySql"))
+                ;
+                
 
             return new start2019DbContext(builder.Options);
         }
