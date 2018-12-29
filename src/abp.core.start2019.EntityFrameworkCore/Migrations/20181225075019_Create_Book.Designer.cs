@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.BackgroundJobs;
 using abp.core.start2019.EntityFrameworkCore;
@@ -10,9 +11,10 @@ using abp.core.start2019.EntityFrameworkCore;
 namespace abp.core.start2019.Migrations
 {
     [DbContext(typeof(start2019DbContext))]
-    partial class start2019DbContextModelSnapshot : ModelSnapshot
+    [Migration("20181225075019_Create_Book")]
+    partial class Create_Book
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

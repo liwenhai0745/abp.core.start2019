@@ -19,8 +19,13 @@ namespace abp.core.start2019.Menus
         private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
             var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<start2019Resource>>();
-
             context.Menu.Items.Insert(0, new ApplicationMenuItem("start2019.Home", l["Menu:Home"], "/"));
+
+            context.Menu.AddItem(
+                new ApplicationMenuItem("BooksStore", l["Menu:BookStore"])
+                    .AddItem(new ApplicationMenuItem("BooksStore.Books", l["Menu:Books"], url: "/Books"))
+            );
+            
         }
     }
 }

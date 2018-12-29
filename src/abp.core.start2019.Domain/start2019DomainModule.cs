@@ -31,9 +31,15 @@ namespace abp.core.start2019
             Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
-                    .Add<start2019Resource>("en")
+                    .Add<start2019Resource>("zh-Hans")
                     .AddBaseTypes(typeof(AbpValidationResource))
-                    .AddVirtualJson("/Localization/start2019");
+                    .AddVirtualJson("/Localization/start2019")
+                    .AddVirtualJson("/Localization/BookStore")
+
+                    ;
+
+
+
             });
 
             Configure<SettingOptions>(options =>

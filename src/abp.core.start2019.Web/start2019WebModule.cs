@@ -33,6 +33,7 @@ using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using Volo.Abp.EntityFrameworkCore;
+using System.Globalization;
 
 namespace abp.core.start2019
 {
@@ -104,6 +105,7 @@ namespace abp.core.start2019
 
         private static void ConfigureLocalizationServices(IServiceCollection services)
         {
+            //CultureInfo.CurrentUICulture = new CultureInfo("zh-Hans");
             services.Configure<AbpLocalizationOptions>(options =>
             {
                 options.Resources
@@ -113,10 +115,11 @@ namespace abp.core.start2019
                         typeof(AbpUiResource)
                     );
 
-                options.Languages.Add(new LanguageInfo("en", "en", "English"));
-                options.Languages.Add(new LanguageInfo("pt-BR", "pt-BR", "Português"));
-                options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe"));
+                //options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                //options.Languages.Add(new LanguageInfo("pt-BR", "pt-BR", "Português"));
+                //options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe"));
                 options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+
             });
         }
 

@@ -7,5 +7,6 @@ namespace abp.core.start2019.Branding
     public class start2019BrandingProvider : DefaultBrandingProvider
     {
         public override string AppName => "start2019";
+
     }
 }
